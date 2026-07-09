@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MediSphere AI — Built by Zarak Khan</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background Orbs -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Glass Header -->
+  <header class="glass-header">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="24" cy="24" r="22"/>
+          <path d="M24 12v24M12 24h24" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="6" fill="currentColor" opacity="0.25"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">MediSphere</span>
+        <span class="logo-subtitle">AI Assistant</span>
+        <span class="builder-credit">Built by Zarak Khan</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div class="hospital-badge">
+        <span class="badge-dot"></span>
+        <span>🏥 {{ hospital_name }}</span>
+      </div>
+      <a href="/dashboard" class="dashboard-link">📊 Dashboard</a>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-title">
+        <span class="line"></span>
+        <span class="text">Quick Actions</span>
+        <span class="line"></span>
+      </div>
+
+      <button class="action-card" data-action="register">
+        <span class="action-icon">📝</span>
+        <div class="action-text">
+          <span class="action-title">Register New Patient</span>
+          <span class="action-desc">Create a new profile</span>
+        </div>
+        <span class="action-arrow">→</span>
+      </button>
+
+      <button class="action-card" data-action="appointment">
+        <span class="action-icon">📅</span>
+        <div class="action-text">
+          <span class="action-title">Book Appointment</span>
+          <span class="action-desc">Schedule with a doctor</span>
+        </div>
+        <span class="action-arrow">→</span>
+      </button>
+
+      <button class="action-card" data-action="report">
+        <span class="action-icon">📄</span>
+        <div class="action-text">
+          <span class="action-title">Check Lab Report</span>
+          <span class="action-desc">View blood, X-ray, urine</span>
+        </div>
+        <span class="action-arrow">→</span>
+      </button>
+
+      <button class="action-card" data-action="queue">
+        <span class="action-icon">🎫</span>
+        <div class="action-text">
+          <span class="action-title">View Queue Status</span>
+          <span class="action-desc">Check your token & wait time</span>
+        </div>
+        <span class="action-arrow">→</span>
+      </button>
+
+      <button class="action-card emergency" data-action="emergency">
+        <span class="action-icon">🚨</span>
+        <div class="action-text">
+          <span class="action-title">Emergency Contact</span>
+          <span class="action-desc">24/7 hotline & location</span>
+        </div>
+        <span class="action-arrow">→</span>
+      </button>
+
+      <div class="sidebar-footer">
+        <div class="status-row">
+          <span class="status-dot"></span>
+          <span>System Online</span>
+        </div>
+        <div class="builder-footer">Built by Zarak Khan</div>
+        <div class="version-text">v2.0</div>
+      </div>
+    </aside>
+
+    <!-- Chat Area -->
+    <main class="chat-area">
+      <div class="chat-messages" id="chatMessages">
+        <!-- Welcome Message -->
+        <div class="message message-agent">
+          <div class="message-avatar">🤖</div>
+          <div class="message-content">
+            <div class="message-header">
+              <span class="message-sender">MediSphere AI</span>
+              <span class="message-badge">Master Agent</span>
+            </div>
+            <div class="message-body">
+              <p>Welcome to <strong>{{ hospital_name }}</strong>! 👋</p>
+              <p>I'm your AI hospital assistant. I can help you with:</p>
+              <ul>
+                <li>📝 Patient Registration</li>
+                <li>📅 Appointment Booking</li>
+                <li>📄 Lab Report Checking</li>
+                <li>🏥 Hospital Information</li>
+              </ul>
+              <p>How can I assist you today?</p>
+            </div>
+            <div class="message-time" id="welcomeTime"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="typing-indicator" id="typingIndicator">
+        <div class="typing-dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="typing-text">AI is thinking...</span>
+      </div>
+
+      <!-- Chat Input -->
+      <div class="chat-input-area">
+        <div class="input-row">
+          <input type="text" id="messageInput" placeholder="Type your message here..." autocomplete="off">
+          <button id="sendBtn" aria-label="Send message">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <div class="input-hint">Press Enter to send • Type 'help' for examples</div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Mobile FAB -->
+  <button class="fab-chat" id="fabChat" aria-label="Open chat">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+  </button>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — MediSphere AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+  <!-- Background Orbs -->
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Glass Header -->
+  <header class="glass-header">
+    <div class="logo-area">
+      <div class="logo-icon">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="24" cy="24" r="22"/>
+          <path d="M24 12v24M12 24h24" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="24" cy="24" r="6" fill="currentColor" opacity="0.25"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">MediSphere</span>
+        <span class="logo-subtitle">Admin Dashboard</span>
+        <span class="builder-credit">Built by Zarak Khan</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="/" class="dashboard-link">← Back to Chat</a>
+    </div>
+  </header>
+
+  <div class="dashboard-container">
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-value" id="statPatients">0</div>
+        <div class="stat-label">Total Patients</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-value" id="statAppointments">0</div>
+        <div class="stat-label">Today's Appointments</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">📄</div>
+        <div class="stat-value" id="statReports">0</div>
+        <div class="stat-label">Pending Reports</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🎫</div>
+        <div class="stat-value" id="statQueue">0</div>
+        <div class="stat-label">In Queue</div>
+      </div>
+    </div>
+
+    <!-- Queue Board -->
+    <div class="dashboard-section">
+      <h2 class="section-title">🎫 Live Queue Board</h2>
+      <div class="queue-board" id="queueBoard">
+        <div class="queue-empty">Loading queue data...</div>
+      </div>
+    </div>
+
+    <!-- Two Column Grid -->
+    <div class="dashboard-grid">
+      <!-- Patients List -->
+      <div class="dashboard-section">
+        <h2 class="section-title">👥 Recent Patients</h2>
+        <div class="search-box">
+          <input type="text" id="patientSearch" placeholder="Search patients...">
+        </div>
+        <div class="data-table-wrapper">
+          <table class="data-table" id="patientsTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>CNIC</th>
+                <th>Phone</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody id="patientsBody">
+              <tr><td colspan="5" class="loading-cell">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Today's Appointments -->
+      <div class="dashboard-section">
+        <h2 class="section-title">📅 Today's Appointments</h2>
+        <div class="data-table-wrapper">
+          <table class="data-table" id="appointmentsTable">
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Patient</th>
+                <th>Doctor</th>
+                <th>Time</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="appointmentsBody">
+              <tr><td colspan="5" class="loading-cell">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Doctors List -->
+    <div class="dashboard-section">
+      <h2 class="section-title">👨‍⚕️ Doctors</h2>
+      <div class="doctors-grid" id="doctorsGrid">
+        {% for name, info in doctors.items() %}
+        <div class="doctor-card">
+          <div class="doctor-avatar">👨‍⚕️</div>
+          <div class="doctor-name">{{ name }}</div>
+          <div class="doctor-dept">{{ info.department }}</div>
+          <div class="doctor-spec">{{ info.specialization }}</div>
+          <div class="doctor-fee">Rs. {{ info.fee }}</div>
+          <div class="doctor-exp">{{ info.experience }} experience</div>
+          <div class="doctor-slots">{{ info.slots | join(', ') }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Dashboard Data Loading
+    async function loadStats() {
+      try {
+        const res = await fetch('/api/stats');
+        const data = await res.json();
+        if (data.status === 'success') {
+          document.getElementById('statPatients').textContent = data.data.total_patients;
+          document.getElementById('statAppointments').textContent = data.data.today_appointments;
+          document.getElementById('statReports').textContent = data.data.pending_reports;
+          document.getElementById('statQueue').textContent = data.data.queue_count;
+        }
+      } catch (e) { console.error('Stats error:', e); }
+    }
+
+    async function loadPatients() {
+      try {
+        const res = await fetch('/api/patients');
+        const data = await res.json();
+        const tbody = document.getElementById('patientsBody');
+        if (data.data && data.data.length > 0) {
+          tbody.innerHTML = data.data.slice(0, 10).map(p => `
+            <tr>
+              <td>${p.id}</td>
+              <td>${p.name}</td>
+              <td>${p.cnic}</td>
+              <td>${p.phone}</td>
+              <td>${p.age}</td>
+            </tr>
+          `).join('');
+        } else {
+          tbody.innerHTML = '<tr><td colspan="5" class="empty-cell">No patients yet</td></tr>';
+        }
+      } catch (e) { console.error('Patients error:', e); }
+    }
+
+    async function loadAppointments() {
+      try {
+        const res = await fetch('/api/appointments');
+        const data = await res.json();
+        const tbody = document.getElementById('appointmentsBody');
+        if (data.data && data.data.length > 0) {
+          tbody.innerHTML = data.data.map(a => `
+            <tr>
+              <td><span class="token-badge">${a.token_number}</span></td>
+              <td>${a.patient_id}</td>
+              <td>${a.doctor_name}</td>
+              <td>${a.time_slot}</td>
+              <td><span class="status-badge ${a.status}">${a.status}</span></td>
+            </tr>
+          `).join('');
+        } else {
+          tbody.innerHTML = '<tr><td colspan="5" class="empty-cell">No appointments today</td></tr>';
+        }
+      } catch (e) { console.error('Appointments error:', e); }
+    }
+
+    async function loadQueue() {
+      try {
+        const res = await fetch('/api/queue');
+        const data = await res.json();
+        const board = document.getElementById('queueBoard');
+        if (data.data && data.data.length > 0) {
+          board.innerHTML = data.data.map(q => `
+            <div class="queue-item">
+              <div class="queue-token">#${q.token_number}</div>
+              <div class="queue-info">
+                <div class="queue-dept">${q.department}</div>
+                <div class="queue-doctor">${q.doctor_name}</div>
+                <div class="queue-wait">~${q.estimated_wait} min wait</div>
+              </div>
+              <div class="queue-status waiting">WAITING</div>
+            </div>
+          `).join('');
+        } else {
+          board.innerHTML = '<div class="queue-empty">No patients in queue</div>';
+        }
+      } catch (e) { console.error('Queue error:', e); }
+    }
+
+    // Patient search
+    document.getElementById('patientSearch').addEventListener('input', function(e) {
+      const term = e.target.value.toLowerCase();
+      const rows = document.querySelectorAll('#patientsBody tr');
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(term) ? '' : 'none';
+      });
+    });
+
+    // Initial load
+    loadStats();
+    loadPatients();
+    loadAppointments();
+    loadQueue();
+
+    // Auto refresh
+    setInterval(loadStats, 10000);
+    setInterval(loadQueue, 15000);
+  </script>
+</body>
+</html>

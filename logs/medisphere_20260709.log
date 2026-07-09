@@ -1,0 +1,289 @@
+[2026-07-09 16:08:56] [INFO] All database tables created/verified
+[2026-07-09 16:08:56] [INFO] Database initialized successfully
+[2026-07-09 16:12:54] [INFO] All database tables created/verified
+[2026-07-09 16:12:54] [INFO] Database initialized successfully
+[2026-07-09 16:15:17] [INFO] All database tables created/verified
+[2026-07-09 16:15:17] [INFO] Database initialized successfully
+[2026-07-09 16:15:17] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 16:15:17] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 16:15:17] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 16:15:17] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 16:15:17] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 16:15:17] [INFO] Master Orchestrator initialized
+[2026-07-09 16:15:17] [INFO] ============================================================
+[2026-07-09 16:15:17] [INFO] MediSphere AI - Starting Up
+[2026-07-09 16:15:17] [INFO] ============================================================
+[2026-07-09 16:15:17] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 16:15:17] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 16:15:17] [INFO] Doctors: 6
+[2026-07-09 16:15:17] [INFO] ============================================================
+[2026-07-09 16:15:18] [INFO] All database tables created/verified
+[2026-07-09 16:15:18] [INFO] Database initialized successfully
+[2026-07-09 16:15:18] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 16:15:18] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 16:15:18] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 16:15:18] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 16:15:18] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 16:15:18] [INFO] Master Orchestrator initialized
+[2026-07-09 16:15:18] [INFO] ============================================================
+[2026-07-09 16:15:18] [INFO] MediSphere AI - Starting Up
+[2026-07-09 16:15:18] [INFO] ============================================================
+[2026-07-09 16:15:18] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 16:15:18] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 16:15:18] [INFO] Doctors: 6
+[2026-07-09 16:15:18] [INFO] ============================================================
+[2026-07-09 16:16:26] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:16:26] [INFO] Processing message from user_sess_cpd3gffe9wf: register my name is Zarak Khan...
+[2026-07-09 16:16:26] [INFO] Intent classified by regex: registration
+[2026-07-09 16:16:26] [INFO] [PatientRegistrationAgent] Processing registration request 
+[2026-07-09 16:18:14] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:18:14] [INFO] Processing message from user_sess_cpd3gffe9wf: register my name is Zarak Khan, cnic 12345-1234567...
+[2026-07-09 16:18:14] [INFO] Intent classified by regex: registration
+[2026-07-09 16:18:14] [INFO] [PatientRegistrationAgent] Processing registration request 
+[2026-07-09 16:18:14] [INFO] Patient registered: PT-77FB3292
+[2026-07-09 16:18:14] [INFO] [PatientRegistrationAgent] Patient registered PT-77FB3292
+[2026-07-09 16:18:47] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:18:47] [INFO] Processing message from user_sess_cpd3gffe9wf: book appointment with Dr. Ahmed Khan tomorrow...
+[2026-07-09 16:18:47] [INFO] Intent classified by regex: appointment
+[2026-07-09 16:18:47] [INFO] [AppointmentBookingAgent] Processing appointment request 
+[2026-07-09 16:18:47] [INFO] Appointment booked: APT-D240ACCC
+[2026-07-09 16:18:47] [INFO] [AppointmentBookingAgent] Appointment booked APT-D240ACCC
+[2026-07-09 16:19:22] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:19:22] [INFO] Processing message from user_sess_cpd3gffe9wf: book appointment with Dr. Ahmed Khan tomorrow...
+[2026-07-09 16:19:22] [INFO] Intent classified by regex: appointment
+[2026-07-09 16:19:22] [INFO] [AppointmentBookingAgent] Processing appointment request 
+[2026-07-09 16:19:22] [INFO] Appointment booked: APT-78876EAD
+[2026-07-09 16:19:22] [INFO] [AppointmentBookingAgent] Appointment booked APT-78876EAD
+[2026-07-09 16:19:37] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:19:37] [INFO] Processing message from user_sess_cpd3gffe9wf: check my blood test report...
+[2026-07-09 16:19:37] [INFO] Intent classified by regex: report
+[2026-07-09 16:19:37] [INFO] [ReportQueueAgent] Processing report/queue request 
+[2026-07-09 16:19:37] [INFO] Report generated: RPT-AAC5E166
+[2026-07-09 16:19:59] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:19:59] [INFO] Processing message from user_sess_cpd3gffe9wf: check my x-ray report...
+[2026-07-09 16:19:59] [INFO] Intent classified by regex: report
+[2026-07-09 16:19:59] [INFO] [ReportQueueAgent] Processing report/queue request 
+[2026-07-09 16:19:59] [INFO] Report generated: RPT-C8EDB537
+[2026-07-09 16:20:13] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:20:13] [INFO] Processing message from user_sess_cpd3gffe9wf: I have fever what medicine should I take...
+[2026-07-09 16:20:13] [INFO] Intent classified by regex: faq
+[2026-07-09 16:20:13] [INFO] [FAQGuidanceAgent] Processing FAQ 
+[2026-07-09 16:20:37] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:20:37] [INFO] Processing message from user_sess_cpd3gffe9wf: hospital timing and locations...
+[2026-07-09 16:20:37] [INFO] Intent classified by regex: faq
+[2026-07-09 16:20:37] [INFO] [FAQGuidanceAgent] Processing FAQ 
+[2026-07-09 16:21:00] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:21:00] [INFO] Processing message from user_sess_cpd3gffe9wf: where it located in quetta...
+[2026-07-09 16:21:00] [INFO] Intent classified by regex: faq
+[2026-07-09 16:21:00] [INFO] [FAQGuidanceAgent] Processing FAQ 
+[2026-07-09 16:21:26] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:21:26] [INFO] Processing message from user_sess_cpd3gffe9wf: what are hospital timings...
+[2026-07-09 16:21:26] [INFO] Intent classified by regex: faq
+[2026-07-09 16:21:26] [INFO] [FAQGuidanceAgent] Processing FAQ 
+[2026-07-09 16:21:34] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:21:34] [INFO] Processing message from user_sess_cpd3gffe9wf: my token status...
+[2026-07-09 16:21:34] [INFO] Intent classified by regex: report
+[2026-07-09 16:21:34] [INFO] [ReportQueueAgent] Processing report/queue request 
+[2026-07-09 16:22:34] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:22:34] [INFO] Processing message from user_sess_cpd3gffe9wf: emergency contact...
+[2026-07-09 16:22:34] [INFO] Intent classified by regex: faq
+[2026-07-09 16:22:34] [INFO] [FAQGuidanceAgent] Processing FAQ 
+[2026-07-09 16:45:55] [INFO] All database tables created/verified
+[2026-07-09 16:45:55] [INFO] Database initialized successfully
+[2026-07-09 16:45:56] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 16:45:56] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 16:45:56] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 16:45:56] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 16:45:56] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 16:45:56] [INFO] Master Orchestrator initialized
+[2026-07-09 16:45:56] [INFO] ============================================================
+[2026-07-09 16:45:56] [INFO] MediSphere AI - Starting Up
+[2026-07-09 16:45:56] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 16:45:56] [INFO] ============================================================
+[2026-07-09 16:45:56] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 16:45:56] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 16:45:56] [INFO] Doctors: 6
+[2026-07-09 16:45:56] [INFO] ============================================================
+[2026-07-09 16:45:56] [INFO] All database tables created/verified
+[2026-07-09 16:45:56] [INFO] Database initialized successfully
+[2026-07-09 16:45:56] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 16:45:56] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 16:45:56] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 16:45:56] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 16:45:56] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 16:45:56] [INFO] Master Orchestrator initialized
+[2026-07-09 16:45:56] [INFO] ============================================================
+[2026-07-09 16:45:56] [INFO] MediSphere AI - Starting Up
+[2026-07-09 16:45:56] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 16:45:56] [INFO] ============================================================
+[2026-07-09 16:45:56] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 16:45:56] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 16:45:56] [INFO] Doctors: 6
+[2026-07-09 16:45:56] [INFO] ============================================================
+[2026-07-09 16:49:18] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:49:18] [INFO] Processing message from user_sess_cpd3gffe9wf: register my name is Zarak Khan, cnic 12345-1234567...
+[2026-07-09 16:49:18] [INFO] Intent classified by regex: registration
+[2026-07-09 16:49:18] [INFO] [PatientRegistrationAgent] Processing registration request 
+[2026-07-09 16:50:04] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:50:04] [INFO] Processing message from user_sess_cpd3gffe9wf: what are hospital timings...
+[2026-07-09 16:50:04] [INFO] Intent classified by regex: faq
+[2026-07-09 16:50:04] [INFO] [FAQGuidanceAgent] Processing FAQ 
+[2026-07-09 16:50:34] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:50:34] [INFO] Processing message from user_sess_cpd3gffe9wf: my token status...
+[2026-07-09 16:50:34] [INFO] Intent classified by regex: report
+[2026-07-09 16:50:34] [INFO] [ReportQueueAgent] Processing report/queue request 
+[2026-07-09 16:51:48] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 16:51:48] [INFO] Processing message from user_sess_cpd3gffe9wf: my token status...
+[2026-07-09 16:51:48] [INFO] Intent classified by regex: report
+[2026-07-09 16:51:48] [INFO] [ReportQueueAgent] Processing report/queue request 
+[2026-07-09 18:30:09] [INFO] All database tables created/verified
+[2026-07-09 18:30:09] [INFO] Database initialized successfully
+[2026-07-09 18:30:10] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 18:30:10] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 18:30:10] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 18:30:10] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 18:30:10] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 18:30:10] [INFO] Master Orchestrator initialized
+[2026-07-09 18:30:10] [INFO] ============================================================
+[2026-07-09 18:30:10] [INFO] MediSphere AI - Starting Up
+[2026-07-09 18:30:10] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 18:30:10] [INFO] ============================================================
+[2026-07-09 18:30:10] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 18:30:10] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 18:30:10] [INFO] Doctors: 6
+[2026-07-09 18:30:10] [INFO] ============================================================
+[2026-07-09 18:30:11] [INFO] All database tables created/verified
+[2026-07-09 18:30:11] [INFO] Database initialized successfully
+[2026-07-09 18:30:11] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 18:30:11] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 18:30:11] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 18:30:11] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 18:30:11] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 18:30:11] [INFO] Master Orchestrator initialized
+[2026-07-09 18:30:11] [INFO] ============================================================
+[2026-07-09 18:30:11] [INFO] MediSphere AI - Starting Up
+[2026-07-09 18:30:11] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 18:30:11] [INFO] ============================================================
+[2026-07-09 18:30:11] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 18:30:11] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 18:30:11] [INFO] Doctors: 6
+[2026-07-09 18:30:11] [INFO] ============================================================
+[2026-07-09 18:30:45] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 18:30:45] [INFO] Processing message from user_sess_cpd3gffe9wf: book appointment with Dr....
+[2026-07-09 18:30:45] [INFO] Intent classified by regex: appointment
+[2026-07-09 18:30:45] [INFO] [AppointmentBookingAgent] Processing appointment request 
+[2026-07-09 18:30:45] [INFO] Appointment booked: APT-52C0EBD9
+[2026-07-09 18:30:45] [INFO] [AppointmentBookingAgent] Appointment booked APT-52C0EBD9
+[2026-07-09 18:37:08] [INFO] All database tables created/verified
+[2026-07-09 18:37:08] [INFO] Database initialized successfully
+[2026-07-09 18:37:08] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 18:37:09] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 18:37:09] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 18:37:09] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 18:37:09] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 18:37:09] [INFO] Master Orchestrator initialized
+[2026-07-09 18:37:09] [INFO] ============================================================
+[2026-07-09 18:37:09] [INFO] MediSphere AI - Starting Up
+[2026-07-09 18:37:09] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 18:37:09] [INFO] ============================================================
+[2026-07-09 18:37:09] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 18:37:09] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 18:37:09] [INFO] Doctors: 6
+[2026-07-09 18:37:09] [INFO] ============================================================
+[2026-07-09 18:37:10] [INFO] All database tables created/verified
+[2026-07-09 18:37:10] [INFO] Database initialized successfully
+[2026-07-09 18:37:10] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 18:37:10] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 18:37:10] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 18:37:10] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 18:37:10] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 18:37:10] [INFO] Master Orchestrator initialized
+[2026-07-09 18:37:10] [INFO] ============================================================
+[2026-07-09 18:37:10] [INFO] MediSphere AI - Starting Up
+[2026-07-09 18:37:10] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 18:37:10] [INFO] ============================================================
+[2026-07-09 18:37:10] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 18:37:10] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 18:37:10] [INFO] Doctors: 6
+[2026-07-09 18:37:10] [INFO] ============================================================
+[2026-07-09 18:46:15] [INFO] All database tables created/verified
+[2026-07-09 18:46:15] [INFO] Database initialized successfully
+[2026-07-09 18:46:16] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 18:46:16] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 18:46:16] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 18:46:16] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 18:46:16] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 18:46:16] [INFO] Master Orchestrator initialized
+[2026-07-09 18:46:16] [INFO] ============================================================
+[2026-07-09 18:46:16] [INFO] MediSphere AI - Starting Up
+[2026-07-09 18:46:16] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 18:46:16] [INFO] ============================================================
+[2026-07-09 18:46:16] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 18:46:16] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 18:46:16] [INFO] Doctors: 6
+[2026-07-09 18:46:16] [INFO] ============================================================
+[2026-07-09 18:46:17] [INFO] All database tables created/verified
+[2026-07-09 18:46:17] [INFO] Database initialized successfully
+[2026-07-09 18:46:17] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 18:46:17] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 18:46:17] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 18:46:17] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 18:46:17] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 18:46:17] [INFO] Master Orchestrator initialized
+[2026-07-09 18:46:17] [INFO] ============================================================
+[2026-07-09 18:46:17] [INFO] MediSphere AI - Starting Up
+[2026-07-09 18:46:17] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 18:46:17] [INFO] ============================================================
+[2026-07-09 18:46:17] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 18:46:17] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 18:46:17] [INFO] Doctors: 6
+[2026-07-09 18:46:17] [INFO] ============================================================
+[2026-07-09 18:47:12] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 18:47:12] [INFO] Processing message from user_sess_cpd3gffe9wf: emergency contact...
+[2026-07-09 18:47:12] [INFO] Intent classified by regex: faq
+[2026-07-09 18:47:12] [INFO] [FAQGuidanceAgent] Processing FAQ 
+[2026-07-09 19:25:06] [INFO] All database tables created/verified
+[2026-07-09 19:25:06] [INFO] Database initialized successfully
+[2026-07-09 19:25:07] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 19:25:07] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 19:25:07] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 19:25:07] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 19:25:07] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 19:25:07] [INFO] Master Orchestrator initialized
+[2026-07-09 19:25:07] [INFO] ============================================================
+[2026-07-09 19:25:07] [INFO] MediSphere AI - Starting Up
+[2026-07-09 19:25:07] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 19:25:07] [INFO] ============================================================
+[2026-07-09 19:25:07] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 19:25:07] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 19:25:07] [INFO] Doctors: 6
+[2026-07-09 19:25:07] [INFO] ============================================================
+[2026-07-09 19:25:08] [INFO] All database tables created/verified
+[2026-07-09 19:25:08] [INFO] Database initialized successfully
+[2026-07-09 19:25:08] [WARNING] Grok API key not found. Running in regex-only fallback mode.
+[2026-07-09 19:25:08] [INFO] Agent initialized: PatientRegistrationAgent
+[2026-07-09 19:25:08] [INFO] Agent initialized: AppointmentBookingAgent
+[2026-07-09 19:25:08] [INFO] Agent initialized: FAQGuidanceAgent
+[2026-07-09 19:25:08] [INFO] Agent initialized: ReportQueueAgent
+[2026-07-09 19:25:08] [INFO] Master Orchestrator initialized
+[2026-07-09 19:25:08] [INFO] ============================================================
+[2026-07-09 19:25:08] [INFO] MediSphere AI - Starting Up
+[2026-07-09 19:25:08] [INFO] Architected & Engineered by Zarak Khan
+[2026-07-09 19:25:08] [INFO] ============================================================
+[2026-07-09 19:25:08] [INFO] Hospital: Quetta City Hospital
+[2026-07-09 19:25:08] [INFO] LLM Mode: Regex Fallback
+[2026-07-09 19:25:08] [INFO] Doctors: 6
+[2026-07-09 19:25:08] [INFO] ============================================================
+[2026-07-09 19:26:05] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 19:26:05] [INFO] Processing message from user_sess_cpd3gffe9wf: emergency contact...
+[2026-07-09 19:26:05] [INFO] Intent classified by regex: faq
+[2026-07-09 19:26:05] [INFO] [FAQGuidanceAgent] Processing FAQ 
+[2026-07-09 19:26:14] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 19:26:14] [INFO] Processing message from user_sess_cpd3gffe9wf: my token status...
+[2026-07-09 19:26:14] [INFO] Intent classified by regex: report
+[2026-07-09 19:26:14] [INFO] [ReportQueueAgent] Processing report/queue request 
+[2026-07-09 20:29:09] [INFO] Chat request from user_sess_cpd3gffe9wf
+[2026-07-09 20:29:09] [INFO] Processing message from user_sess_cpd3gffe9wf: check my report...
+[2026-07-09 20:29:09] [INFO] Intent classified by regex: report
+[2026-07-09 20:29:09] [INFO] [ReportQueueAgent] Processing report/queue request 
+[2026-07-09 20:29:09] [INFO] Report generated: RPT-F58D9A19

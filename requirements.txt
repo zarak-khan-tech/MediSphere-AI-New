@@ -1,0 +1,14 @@
+# MediSphere AI - Dependencies
+# Built by Zarak Khan
+
+# Web Framework
+Flask==3.0.0
+
+# LLM API Client
+requests==2.31.0
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Date/Time Handling
+python-dateutil==2.8.2
