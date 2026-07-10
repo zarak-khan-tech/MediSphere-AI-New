@@ -33,3 +33,4 @@ A complete AI-powered hospital management system built with Flask and Grok API.
 ![Queue Status](screenshots/Screenshot%20(476).png)
 ![Admin Dashboard](screenshots/Screenshot%20(477).png)
 ![Doctors List](screenshots/Screenshot%20(480).png)
+![Doctors List 2](screenshots/Screenshot%20(482).png)
